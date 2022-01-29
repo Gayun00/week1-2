@@ -32,6 +32,10 @@ function BasicInfo() {
   };
 
   useEffect(() => {
+    console.log(basicInfo);
+  }, [basicInfo]);
+
+  useEffect(() => {
     saveData('basicInfo', basicInfo);
     console.log('basicInfo:', basicInfo);
   }, [isSaved]);
@@ -39,7 +43,7 @@ function BasicInfo() {
   return (
     <SettingFrame title="상품기본정보">
       <Category handleBasicInfo={handleBasicInfo} title="selectedCategory" />
-      <FilterTags handleBasicInfo={handleBasicInfo} title="selectedCategory" />
+      <FilterTags handleBasicInfo={handleBasicInfo} title="filterTag" />
       <SettingFramItemWrapper>
         <SettingFramItemContainer>
           <ProductName handleBasicInfo={handleBasicInfo} title="productName" />

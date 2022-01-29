@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable operator-linebreak */
 import React, { useEffect } from 'react';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import isSavedState, { registerFormState } from 'utils/globalState';
 import Button from 'components/atoms/Button';
 import styled from 'styled-components';
@@ -16,11 +16,12 @@ import BasicInfo from 'components/containers/BasicInfo';
 import ProductOption from 'components/containers/ProductOption';
 
 function App() {
-  const setIsSaved = useSetRecoilState(isSavedState);
+  const [isSaved, setIsSaved] = useRecoilState(isSavedState);
   const registerForm = useRecoilValue(registerFormState);
 
-  /*   const checkRequiredValue = () => {
-    if (Object.keys(registerForm).length > 0) {
+
+  const checkRequiredValue = () => {
+    if (isSaved && Object.keys(registerForm).length) {
       const basicInform = registerForm.basicInfo;
       if (
         !basicInform.selectedCategory ||
@@ -32,6 +33,7 @@ function App() {
         alert('필수 항목을 입력하세요');
       } else {
         alert('저장되었습니다');
+        console.log(registerForm);
       }
     }
   }; */
@@ -40,7 +42,8 @@ function App() {
   };
 
   useEffect(() => {
-    // checkRequiredValue();
+    checkRequiredValue();
+    console.log(registerForm);
   }, [registerForm]);
 
   return (
