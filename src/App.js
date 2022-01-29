@@ -19,7 +19,6 @@ function App() {
   const [isSaved, setIsSaved] = useRecoilState(isSavedState);
   const registerForm = useRecoilValue(registerFormState);
 
-
   const checkRequiredValue = () => {
     if (isSaved && Object.keys(registerForm).length) {
       const basicInform = registerForm.basicInfo;
@@ -36,7 +35,7 @@ function App() {
         console.log(registerForm);
       }
     }
-  }; */
+  };
   const onSave = () => {
     setIsSaved((c) => c + 1);
   };
