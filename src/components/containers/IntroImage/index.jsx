@@ -9,8 +9,6 @@ function IntroImage() {
   const [imgFiles, setImgFiles] = useState([]);
   const [registerForm, setRegisterForm] = useRecoilState(registerFormState);
 
-  console.log('intro', registerForm);
-
   const saveData = (key, value) => {
     setRegisterForm({
       ...registerForm,
@@ -20,6 +18,7 @@ function IntroImage() {
 
   useEffect(() => {
     saveData('introImages', imgFiles);
+    console.log('introImages:', imgFiles);
   }, [isSavedState]);
 
   return (

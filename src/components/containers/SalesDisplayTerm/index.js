@@ -20,10 +20,12 @@ function SalesDisplayTerm() {
     });
   };
 
-  console.log(registerForm);
-
   useEffect(() => {
     saveData('노출 및 판매기간 설정', {
+      노출기한: displayTerm,
+      판매기한: salesTerm,
+    });
+    console.log('노출 및 판매기간 설정', {
       노출기한: displayTerm,
       판매기한: salesTerm,
     });

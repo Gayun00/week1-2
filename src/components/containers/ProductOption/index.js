@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-closing-bracket-location */
 import { SettingFrame } from 'components/atoms';
 import OptSet from 'components/molecules/OptSet';
 import React, { useEffect } from 'react';

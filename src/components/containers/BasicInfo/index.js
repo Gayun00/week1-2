@@ -33,6 +33,7 @@ function BasicInfo() {
 
   useEffect(() => {
     saveData('basicInfo', basicInfo);
+    console.log('basicInfo:', basicInfo);
   }, [isSaved]);
 
   return (

@@ -11,7 +11,7 @@ function Thumbnail({ handleBasicInfo, title }) {
 
   return (
     <SettingFramItem title="상품 썸네일">
-      <ImageUpload imgFiles={thumbnail} setImgFiles={setThumbnail} single="true" />
+      <ImageUpload imgFiles={thumbnail} setImgFiles={setThumbnail} single />
     </SettingFramItem>
   );
 }
