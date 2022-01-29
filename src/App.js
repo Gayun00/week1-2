@@ -47,6 +47,7 @@ function App() {
       <NoticeProduct />
       <DeliveryOption />
       <OtherOptions />
+      <MileageStatus />
     </RegisterForm>
   );
 }
