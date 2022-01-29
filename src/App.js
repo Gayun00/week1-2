@@ -19,31 +19,12 @@ function App() {
   const [isSaved, setIsSaved] = useRecoilState(isSavedState);
   const registerForm = useRecoilValue(registerFormState);
 
-  const checkRequiredValue = () => {
-    if (isSaved && Object.keys(registerForm).length) {
-      const basicInform = registerForm.basicInfo;
-      if (
-        !basicInform.selectedCategory ||
-        !basicInform.productName ||
-        !basicInform.productInfo ||
-        !basicInform.totalStock > 0
-        // && option
-      ) {
-        alert('필수 항목을 입력하세요');
-      } else {
-        alert('저장되었습니다');
-        console.log(registerForm);
-      }
-    }
-  };
   const onSave = () => {
+    console.log(
+      '--------------------------------------------------------------------------------'
+    );
     setIsSaved((c) => c + 1);
   };
-
-  useEffect(() => {
-    checkRequiredValue();
-    console.log(registerForm);
-  }, [registerForm]);
 
   return (
     <RegisterForm>
