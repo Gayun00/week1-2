@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { SettingFrame, SettingFramItem } from 'components/atoms';
 import ToggleBtn from 'components/atoms/ToggleBtn';
 import React, { useEffect, useState } from 'react';
@@ -22,6 +23,7 @@ function MileageStatus() {
 
   useEffect(() => {
     saveData('MileageStatus', mileageStatus);
+    console.log('mileageStatus:', mileageStatus);
   }, [isSaved]);
 
   return (

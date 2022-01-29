@@ -1,14 +1,24 @@
-import BasicInfo from 'components/containers/BasicInfo';
+/* eslint-disable no-unused-vars */
+/* eslint-disable operator-linebreak */
 import React, { useEffect } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import isSavedState, { registerFormState } from 'utils/globalState';
 import Button from 'components/atoms/Button';
 import styled from 'styled-components';
+import RecommendedImage from 'components/containers/RecommendedImage';
+import IntroImage from 'components/containers/IntroImage';
+import SalesDisplayTerm from 'components/containers/SalesDisplayTerm';
+import NoticeProduct from 'components/containers/NoticeProduct';
+import DeliveryOption from 'components/containers/DeliveryOption';
+import MileageStatus from 'components/containers/MileageStatus';
+import OtherOptions from 'components/containers/OtherOptions';
+import BasicInfo from 'components/containers/BasicInfo';
 import ProductOption from 'components/containers/ProductOption';
 
 function App() {
   const [isSaved, setIsSaved] = useRecoilState(isSavedState);
   const registerForm = useRecoilValue(registerFormState);
+
 
   const checkRequiredValue = () => {
     if (isSaved && Object.keys(registerForm).length) {
@@ -26,7 +36,7 @@ function App() {
         console.log(registerForm);
       }
     }
-  };
+  }; */
   const onSave = () => {
     setIsSaved((c) => c + 1);
   };
@@ -45,13 +55,18 @@ function App() {
           height="30px"
           text="저장하기"
           color="purple"
-          constrast="true"
-          borderRadius="10"
+          constrast
+          borderRadius={10}
           onClick={onSave}
         />
       </TitleWrapper>
+      <SalesDisplayTerm />
       <BasicInfo />
       <ProductOption />
+      <RecommendedImage />
+      <NoticeProduct />
+      <DeliveryOption />
+      <OtherOptions />
     </RegisterForm>
   );
 }

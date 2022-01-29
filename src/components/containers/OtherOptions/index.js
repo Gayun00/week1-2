@@ -23,6 +23,7 @@ function OtherOptions() {
 
   useEffect(() => {
     saveData('thanksCard', optionsStatus.thanksCard);
+    console.log('thanksCard:', optionsStatus.thanksCard);
   }, [isSaved]);
 
   return (

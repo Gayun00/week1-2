@@ -50,7 +50,7 @@ function ContainerListCustomItem({
   }, [customList]);
 
   useEffect(() => {
-    console.log(filteredProductList);
+    console.log('productList:', filteredProductList);
   }, [isSaved]);
 
   return (

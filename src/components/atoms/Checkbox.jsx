@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/button-has-type */
 import { BORDER_COLOR } from 'constants/color';
@@ -25,7 +26,7 @@ function Checkbox({
 }
 
 Checkbox.propTypes = {
-  state: PropTypes.arrayOf(PropTypes.array),
+  state: PropTypes.object,
   func: PropTypes.func,
   checkedList: PropTypes.arrayOf(PropTypes.array),
 };

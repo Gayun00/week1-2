@@ -18,6 +18,7 @@ function RecommendedImage() {
 
   useEffect(() => {
     saveData('recommendedImages', imgFiles);
+    console.log('recommendedImages', imgFiles);
   }, [isSavedState]);
 
   return (

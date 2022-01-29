@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 // eslint-disable-line no-unused-vars
 import Checkbox from 'components/atoms/Checkbox';
 import SelectedCategory from 'components/atoms/SelectedCategory';
@@ -34,8 +35,8 @@ function SelectCategories({ handleBasicInfo, title }) {
     <Wrapper>
       <CateContainer>
         <ul>
-          {categories.map((category) => (
-            <CateItem>
+          {categories.map((category, index) => (
+            <CateItem key={index}>
               <Checkbox
                 state={category}
                 checkedList={checkedList}

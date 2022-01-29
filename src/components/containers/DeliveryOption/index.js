@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-alert */
 import { SettingFrame } from 'components/atoms';
 import Calendar from 'components/atoms/Calendar';
@@ -33,6 +34,8 @@ function DeliveryOption() {
 
   useEffect(() => {
     saveData('deliveryStatus', { deliveryStatus, orderTime });
+    console.log('deliveryStatus:', deliveryStatus);
+    console.log('orderTime:', orderTime);
   }, [isSaved]);
 
   function onCustomCheckedChange() {
