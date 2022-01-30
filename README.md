@@ -11,7 +11,7 @@
 - 신혜리 : 기간 설정, 필터태그, 이미지 업로드
 
 ### 배포 링크 : 
-https://deploy-preview-42--tender-spence-c01903.netlify.app/
+https://tender-spence-c01903.netlify.app/
 
 <br/>
 
